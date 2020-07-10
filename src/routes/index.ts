@@ -1,5 +1,6 @@
 import LoginView from "../views/login/LoginView";
-// import CurrenciesView from "../views/currencies/CurrenciesView";
+import CurrenciesView from "../views/currencies/CurrenciesView";
+import FormCurrencyView from "../views/currencies/form/FormCurrencyView";
 // import ClientView from "../views/clients/client/ClientView";
 // import ClientsView from "../views/clients/ClientsView";
 // import CategoriesView from "../views/categories/CategoriesView";
@@ -7,9 +8,8 @@ import LoginView from "../views/login/LoginView";
 // import ReportsView from "../views/reports/ReportsView";
 // import TransactionsView from "../views/transactions/TransactionsView";
 // import BalanceView from "../views/balance/BalanceView";
-// import CurrencyView from "../views/currencies/currency/CurrencyView";
 // import TransactionView from "../views/transactions/trasaction/TransactionView";
-// import withAuthentication from "../helpers/hoc/withAuthentication";
+import withAuthentication from "../helpers/hoc/withAuthentication";
 
 const routes = [
     {
@@ -47,16 +47,16 @@ const routes = [
     //     component: withAuthentication(CategoryView),
     //     exact: true
     // },
-    // {
-    //     path: '/currencies',
-    //     component: withAuthentication(CurrenciesView),
-    //     exact: true
-    // },
-    // {
-    //     path: '/currencies/:id',
-    //     component: withAuthentication(CurrencyView),
-    //     exact: true
-    // },
+    {
+        path: '/currencies',
+        component: withAuthentication(CurrenciesView),
+        exact: true
+    },
+    {
+        path: '/currencies/:id',
+        component: withAuthentication(FormCurrencyView),
+        exact: true
+    },
     // {
     //     path: '/reports',
     //     component: withAuthentication(ReportsView),
