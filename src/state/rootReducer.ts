@@ -1,6 +1,6 @@
 import { combineReducers } from 'redux'
 import appReducer from './app/reducer'
-// import currenciesReducer from './currencies/reducer'
+import currenciesReducer from './currencies/reducer'
 // import clientsReducer from './clients/reducer'
 // import categoriesReducer from './categories/reducer'
 // import reportsReducer from './reports/reducer'
@@ -9,7 +9,7 @@ import appReducer from './app/reducer'
 
 const rootReducer = combineReducers({
     appReducer,
-    // currenciesReducer,
+    currenciesReducer,
     // clientsReducer,
     // categoriesReducer,
     // reportsReducer,
