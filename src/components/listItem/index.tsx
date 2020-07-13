@@ -8,7 +8,7 @@ import Avatar from '../avatar'
 type props = {
     avatarSrc?: string,
     title: string,
-    primary: {
+    primary?: {
         text: string,
         fontStyle?: string,
     },
