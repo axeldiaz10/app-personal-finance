@@ -3,8 +3,8 @@ import CurrenciesView from "../views/currencies/CurrenciesView";
 import FormCurrencyView from "../views/currencies/form/FormCurrencyView";
 import CategoriesView from "../views/categories/CategoriesView";
 import FormCategoryView from "../views/categories/form/FormCategoryView";
-// import ClientView from "../views/clients/client/ClientView";
-// import ClientsView from "../views/clients/ClientsView";
+import ClientView from "../views/clients/form/FormClientView";
+import ClientsView from "../views/clients/ClientsView";
 // import ReportsView from "../views/reports/ReportsView";
 // import TransactionsView from "../views/transactions/TransactionsView";
 // import BalanceView from "../views/balance/BalanceView";
@@ -17,21 +17,21 @@ const routes = [
         component: LoginView,
         exact: true
     },
-    // {
-    //     path: '/clients',
-    //     component: withAuthentication(ClientsView),
-    //     exact: true
-    // },
-    // {
-    //     path: '/clients/:id',
-    //     component: withAuthentication(ClientView),
-    //     exact: true
-    // },
-    // {
-    //     path: '/clients/new',
-    //     component: withAuthentication(ClientView),
-    //     exact: true
-    // },
+    {
+        path: '/clients',
+        component: withAuthentication(ClientsView),
+        exact: true
+    },
+    {
+        path: '/clients/:id',
+        component: withAuthentication(ClientView),
+        exact: true
+    },
+    {
+        path: '/clients/new',
+        component: withAuthentication(ClientView),
+        exact: true
+    },
     {
         path: '/categories',
         component: withAuthentication(CategoriesView),
