@@ -23,11 +23,12 @@ export type Transaction = {
     amount: number,
     date?: string,
     description: string,
-    type?: string,
-    category?: string,
-    currency?: string,
     type_id: number,
     category_id: number,
     currency_id: number
+    type?: string,
+    category?: string,
+    currency?: string,
+    accounts?: Array<{balance: string, currency: string}>
 }
 // Por como vienen los datos del mock se implemento asi momentaneamente

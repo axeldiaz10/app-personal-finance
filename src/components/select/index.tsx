@@ -9,7 +9,7 @@ type props = {
     value: string,
     onChange: Function,
     data: Array<{
-        key: number,
+        key: any,
         name: string,
     }>
 }
@@ -22,20 +22,20 @@ const SelectComponent: React.FunctionComponent<props> = ({label, value, onChange
             <S.Select variant='outlined'>
                 <InputLabel id='input-label-select'>{label}</InputLabel>
                 <Select
-                labelId='input-label-select'
-                value={value}
-                onChange={handleChange}
-                label={label}>
-                    <MenuItem value=''>
-                        <em>None</em>
-                    </MenuItem>
-                    {data.map((option) => (
-                    <MenuItem 
-                        key={option.key} 
-                        value={option.key}>
-                            {option.name}
-                    </MenuItem>
-                    ))}
+                    labelId='input-label-select'
+                    value={value}
+                    onChange={handleChange}
+                    label={label}>
+                        <MenuItem value=''>
+                            <em>None</em>
+                        </MenuItem>
+                        {data.map((option) => (
+                        <MenuItem 
+                            key={option.key} 
+                            value={option.key}>
+                                {option.name}
+                        </MenuItem>
+                        ))}
                 </Select>
             </S.Select>
         </S.Container>
