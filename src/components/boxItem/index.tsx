@@ -6,10 +6,10 @@ import DeleteIcon from '@material-ui/icons/Delete'
 
 type props = {
     info: JSX.Element,
-    description: JSX.Element
-    editable: boolean,
-    onClickEdit: Function,
-    onClickDelete: Function
+    description?: JSX.Element
+    editable?: boolean,
+    onClickEdit?: Function,
+    onClickDelete?: Function
 }
 
 const BoxItem: React.FunctionComponent<props> = ({ info, description, editable, onClickEdit, onClickDelete }) => {

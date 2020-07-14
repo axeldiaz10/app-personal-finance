@@ -4,7 +4,7 @@ import currenciesReducer from './currencies/reducer'
 import categoriesReducer from './categories/reducer'
 import clientsReducer from './clients/reducer'
 import transactionsReducer from './transactions/reducer'
-// import reportsReducer from './reports/reducer'
+import reportsReducer from './reports/reducer'
 // import balanceReducer from './balance/reducer'
 
 const rootReducer = combineReducers({
@@ -13,7 +13,7 @@ const rootReducer = combineReducers({
     categoriesReducer,
     clientsReducer,
     transactionsReducer,
-    // reportsReducer,
+    reportsReducer,
     // balanceReducer
 })
 
