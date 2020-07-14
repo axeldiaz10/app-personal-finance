@@ -7,7 +7,7 @@ import ClientView from "../views/clients/form/FormClientView";
 import ClientsView from "../views/clients/ClientsView";
 import TransactionsView from "../views/transactions/TransactionsView";
 import TransactionView from "../views/transactions/form/FormTransactionView";
-// import ReportsView from "../views/reports/ReportsView";
+import ReportsView from "../views/reports/ReportsView";
 // import BalanceView from "../views/balance/BalanceView";
 import withAuthentication from "../helpers/hoc/withAuthentication";
 
@@ -57,11 +57,11 @@ const routes = [
         component: withAuthentication(FormCurrencyView),
         exact: true
     },
-    // {
-    //     path: '/reports',
-    //     component: withAuthentication(ReportsView),
-    //     exact: true
-    // },
+    {
+        path: '/reports',
+        component: withAuthentication(ReportsView),
+        exact: true
+    },
     {
         path: '/transactions',
         component: withAuthentication(TransactionsView),

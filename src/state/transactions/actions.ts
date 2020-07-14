@@ -9,7 +9,6 @@ const fetchTransactions = () => {
         dispatch(loadingTransactions(true))
         services.fetchTransactions(
             (response: any) => {
-                debugger
                 dispatch(loadingTransactions(false))
                 const { data: { transactions } } = response
                 dispatch(setTransactions(transactions))
@@ -41,7 +40,6 @@ const fetchTransaction = (id: number) => {
         services.fetchTransaction(
             id,
             (response: any) => {
-                debugger
                 dispatch(loadingTransaction(false))
                 const { data: { transaction } } = response
                 dispatch(setTransaction(transaction))
