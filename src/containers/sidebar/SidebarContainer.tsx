@@ -104,7 +104,7 @@ const UserOptions: Array<{
         linkTo: '/reports',
     },
     {
-        id: 4,
+        id: 5,
         text: 'Profile',
         icon: <PersonIcon />,
         linkTo: '/profile/1',
