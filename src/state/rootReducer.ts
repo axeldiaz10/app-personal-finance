@@ -3,8 +3,8 @@ import appReducer from './app/reducer'
 import currenciesReducer from './currencies/reducer'
 import categoriesReducer from './categories/reducer'
 import clientsReducer from './clients/reducer'
+import transactionsReducer from './transactions/reducer'
 // import reportsReducer from './reports/reducer'
-// import transactionsReducer from './transactions/reducer'
 // import balanceReducer from './balance/reducer'
 
 const rootReducer = combineReducers({
@@ -12,8 +12,8 @@ const rootReducer = combineReducers({
     currenciesReducer,
     categoriesReducer,
     clientsReducer,
+    transactionsReducer,
     // reportsReducer,
-    // transactionsReducer,
     // balanceReducer
 })
 
