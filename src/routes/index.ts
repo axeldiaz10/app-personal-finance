@@ -5,10 +5,10 @@ import CategoriesView from "../views/categories/CategoriesView";
 import FormCategoryView from "../views/categories/form/FormCategoryView";
 import ClientView from "../views/clients/form/FormClientView";
 import ClientsView from "../views/clients/ClientsView";
+import TransactionsView from "../views/transactions/TransactionsView";
+import TransactionView from "../views/transactions/form/FormTransactionView";
 // import ReportsView from "../views/reports/ReportsView";
-// import TransactionsView from "../views/transactions/TransactionsView";
 // import BalanceView from "../views/balance/BalanceView";
-// import TransactionView from "../views/transactions/trasaction/TransactionView";
 import withAuthentication from "../helpers/hoc/withAuthentication";
 
 const routes = [
@@ -62,21 +62,21 @@ const routes = [
     //     component: withAuthentication(ReportsView),
     //     exact: true
     // },
-    // {
-    //     path: '/transactions',
-    //     component: withAuthentication(TransactionsView),
-    //     exact: true
-    // },
-    // {
-    //     path: '/transactions/:id',
-    //     component: withAuthentication(TransactionView),
-    //     exact: true
-    // },
-    // {
-    //     path: '/transactions/new',
-    //     component: withAuthentication(TransactionView),
-    //     exact: true
-    // },
+    {
+        path: '/transactions',
+        component: withAuthentication(TransactionsView),
+        exact: true
+    },
+    {
+        path: '/transactions/:id',
+        component: withAuthentication(TransactionView),
+        exact: true
+    },
+    {
+        path: '/transactions/new',
+        component: withAuthentication(TransactionView),
+        exact: true
+    },
     // {
     //     path: '/profile/:id',
     //     component: withAuthentication(ClientView),
