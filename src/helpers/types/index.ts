@@ -32,3 +32,12 @@ export type Transaction = {
     accounts?: Array<{balance: string, currency: string}>
 }
 // Por como vienen los datos del mock se implemento asi momentaneamente
+
+export type Balance = { 
+    id: number,
+    account_name: string, 
+    currency: string,
+    label_balance: string,
+    label_total_ingresos: string,
+    label_total_egresos: string
+}
