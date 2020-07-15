@@ -10,6 +10,8 @@ type props = {
     text: string,
     icon: string,
     linkTo: string,
+    selected: boolean,
+    onChangeSelected: Function,
     subOptions: Array<{
         id: number,
         text: string,
@@ -18,11 +20,12 @@ type props = {
     }>
 }
 
-const Option: FunctionComponent<props> = ({id, text, icon, linkTo, subOptions}) => {
+const Option: FunctionComponent<props> = ({id, text, icon, linkTo, selected, onChangeSelected, subOptions}) => {
     const [open, setOpen] = useState(false);
     const history = useHistory();
 
     const handleClick = () => {
+        onChangeSelected(text)
         subOptions 
             ? setOpen(!open)
             : history.push(linkTo)
@@ -31,6 +34,7 @@ const Option: FunctionComponent<props> = ({id, text, icon, linkTo, subOptions}) 
     return (
         <div>
             <ListItem 
+                selected={selected}
                 button
                 key={id}
                 onClick={handleClick}>
