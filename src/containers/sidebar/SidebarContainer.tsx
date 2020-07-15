@@ -1,4 +1,4 @@
-import React, { FunctionComponent } from 'react'
+import React, { FunctionComponent, useState } from 'react'
 import { List, Divider } from '@material-ui/core';
 import * as S from './SidebarContainer.styles';
 import Option from '../../components/option';
@@ -17,9 +17,14 @@ type props = {
 }
 
 const SidebarContainer: FunctionComponent<props>= (props) => {
+    const [optionSelected, setOptionSelected] = useState('')
     const isAdmin = useSelector((state: RootState) => state.appReducer.isAdmin)
-
+    
     const options = isAdmin ? AdminOptions : UserOptions
+
+    const handleChangeSelected = (optionSelected: string) => {
+        setOptionSelected(optionSelected)
+    }
 
     return (
         <S.Container>
@@ -30,11 +35,13 @@ const SidebarContainer: FunctionComponent<props>= (props) => {
             <List>
                 {options.map((option: any) => (
                     <div key={option.id}>
-                        <Option 
+                        <Option
                             id={option.id}
                             text={option.text}
                             icon={option.icon}
                             linkTo={option.linkTo}
+                            selected={optionSelected===option.text}
+                            onChangeSelected={handleChangeSelected}
                             subOptions={option.subOptions && option.subOptions}
                         />
                     </div>

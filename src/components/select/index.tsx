@@ -9,7 +9,7 @@ type props = {
     value: string,
     onChange: Function,
     data: Array<{
-        key: any,
+        key: React.Key,
         name: string,
     }>
 }

@@ -8,7 +8,7 @@ import ClientsView from "../views/clients/ClientsView";
 import TransactionsView from "../views/transactions/TransactionsView";
 import TransactionView from "../views/transactions/form/FormTransactionView";
 import ReportsView from "../views/reports/ReportsView";
-// import BalanceView from "../views/balance/BalanceView";
+import BalanceView from "../views/balance/BalanceView";
 import withAuthentication from "../helpers/hoc/withAuthentication";
 
 const routes = [
@@ -77,17 +77,16 @@ const routes = [
         component: withAuthentication(TransactionView),
         exact: true
     },
-    // {
-    //     path: '/profile/:id',
-    //     component: withAuthentication(ClientView),
-    //     exact: true
-    // },
-    // {
-    //     path: '/balance',
-    //     component: withAuthentication(BalanceView),
-    //     data: { title: "Heroes List" },
-    //     exact: true
-    // }
+    {
+        path: '/profile/:id',
+        component: withAuthentication(ClientView),
+        exact: true
+    },
+    {
+        path: '/balance',
+        component: withAuthentication(BalanceView),
+        exact: true
+    }
 ]
 
 export default routes

@@ -5,7 +5,7 @@ import categoriesReducer from './categories/reducer'
 import clientsReducer from './clients/reducer'
 import transactionsReducer from './transactions/reducer'
 import reportsReducer from './reports/reducer'
-// import balanceReducer from './balance/reducer'
+import balanceReducer from './balance/reducer'
 
 const rootReducer = combineReducers({
     appReducer,
@@ -14,7 +14,7 @@ const rootReducer = combineReducers({
     clientsReducer,
     transactionsReducer,
     reportsReducer,
-    // balanceReducer
+    balanceReducer
 })
 
 export type RootState = ReturnType<typeof rootReducer>

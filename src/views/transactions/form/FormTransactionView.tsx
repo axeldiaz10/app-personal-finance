@@ -92,7 +92,6 @@ const TransactionView: React.FunctionComponent<props> = () => {
         return false
     }
 
-    console.log('TRANSACTION', transactionState)
     return (
         <S.Container>
             <Input
